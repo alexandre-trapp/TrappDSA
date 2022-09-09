@@ -1,3 +1,4 @@
-﻿using TrappDSA.Algorithms;
+﻿using BenchmarkDotNet.Running;
+using TrappDSA;
 
-BinarySearch.Execute();
+BenchmarkRunner.Run<TrappBenchmarks>();

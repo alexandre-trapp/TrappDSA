@@ -1,14 +1,12 @@
 ﻿namespace TrappDSA.Algorithms;
 
-public static class BinarySearch
+public class BinarySearch
 {
-    public static void Execute()
+    public void Execute()
     {
         var ordenedArray = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        Console.Write("Input the targetNumber: ");
-
-        var targetNumber = int.Parse(Console.ReadLine()!);
+        var targetNumber = new Random().Next(1, 10);
 
         var middle = ordenedArray.Length / 2;
         Console.WriteLine("Findind target number");
