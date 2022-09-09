@@ -11,15 +11,18 @@ public static class BinarySearch
         var targetNumber = int.Parse(Console.ReadLine()!);
 
         var middle = ordenedArray.Length / 2;
-        Console.WriteLine($"Findind target number");
+        Console.WriteLine("Findind target number");
+
+        int attempts = 0;
 
         while (middle >= 0)
         {
+            attempts++;
             Console.WriteLine($"ordenedArray[{middle}] => {ordenedArray[middle]}");
 
             if (ordenedArray[middle] == targetNumber)
             {
-                Console.WriteLine($"TargetNumber {targetNumber} founded on position ordenedArray[{middle}]");
+                Console.WriteLine($"TargetNumber {targetNumber} founded on position ordenedArray[{middle}] with {attempts} attempts!!");
                 return;
             }
 
@@ -28,5 +31,8 @@ public static class BinarySearch
             else
                 middle++;
         }
+
+        Console.WriteLine($"targetNumber {targetNumber} not found");
+
     }
 }
